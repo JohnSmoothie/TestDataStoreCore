@@ -628,19 +628,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\victor\\.nuget\\packages\\": {}
+    "C:\\Users\\lomed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\victor\\Desktop\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore.csproj",
+      "projectUniqueName": "E:\\M2\\projetColin\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore.csproj",
       "projectName": "TestDataStoreCore",
-      "projectPath": "C:\\Users\\victor\\Desktop\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore.csproj",
-      "packagesPath": "C:\\Users\\victor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\victor\\Desktop\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore\\obj\\",
+      "projectPath": "E:\\M2\\projetColin\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore.csproj",
+      "packagesPath": "C:\\Users\\lomed\\.nuget\\packages\\",
+      "outputPath": "E:\\M2\\projetColin\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\victor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lomed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -652,6 +652,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -663,6 +664,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Google.Cloud.Datastore.V1": {
             "target": "Package",
@@ -679,12 +681,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.8, 3.1.8]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.9, 3.1.9]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

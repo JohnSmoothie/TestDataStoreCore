@@ -28,7 +28,7 @@ namespace TestDataStoreCore
             personneEntities.Add(
                     new Entity
                     {
-                        Key = db.CreateKeyFactory(kind).CreateKey($"key{1}"),
+                        Key = db.CreateKeyFactory(kind).CreateKey($"key{3}"),
                         ["nom"] = $"Coudrec",
                         ["prenom"] = $"Clémentine",
                         ["age"] = 21
