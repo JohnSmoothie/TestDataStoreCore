@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uQ7HaBkaKkSwSO1P+WbsEPBZ0rJxlxsBenhJ2cA1Omu+KuniC9h1htFWdCQxGmWMzHa/EUx9xG8ibVEx3k0uMQ==",
+  "dgSpecHash": "TpD6Sx39la4p+qpLhRTFZErnPZfe4a0ljVrz7y8wkxx7ImkCgxhbv3cTZ6uBh7RC/Es9tgVXEHse60bo3Hg7Eg==",
   "success": true,
   "projectFilePath": "E:\\M2\\projetColin\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore\\TestDataStoreCore.csproj",
   "expectedPackageFiles": [
@@ -8,9 +8,12 @@
     "C:\\Users\\lomed\\.nuget\\packages\\google.api.gax\\3.2.0\\google.api.gax.3.2.0.nupkg.sha512",
     "C:\\Users\\lomed\\.nuget\\packages\\google.api.gax.grpc\\3.2.0\\google.api.gax.grpc.3.2.0.nupkg.sha512",
     "C:\\Users\\lomed\\.nuget\\packages\\google.api.gax.grpc.grpccore\\3.2.0\\google.api.gax.grpc.grpccore.3.2.0.nupkg.sha512",
-    "C:\\Users\\lomed\\.nuget\\packages\\google.apis\\1.48.0\\google.apis.1.48.0.nupkg.sha512",
-    "C:\\Users\\lomed\\.nuget\\packages\\google.apis.auth\\1.48.0\\google.apis.auth.1.48.0.nupkg.sha512",
-    "C:\\Users\\lomed\\.nuget\\packages\\google.apis.core\\1.48.0\\google.apis.core.1.48.0.nupkg.sha512",
+    "C:\\Users\\lomed\\.nuget\\packages\\google.api.gax.rest\\3.1.0\\google.api.gax.rest.3.1.0.nupkg.sha512",
+    "C:\\Users\\lomed\\.nuget\\packages\\google.apis\\1.49.0\\google.apis.1.49.0.nupkg.sha512",
+    "C:\\Users\\lomed\\.nuget\\packages\\google.apis.auth\\1.49.0\\google.apis.auth.1.49.0.nupkg.sha512",
+    "C:\\Users\\lomed\\.nuget\\packages\\google.apis.bigquery.v2\\1.49.0.2077\\google.apis.bigquery.v2.1.49.0.2077.nupkg.sha512",
+    "C:\\Users\\lomed\\.nuget\\packages\\google.apis.core\\1.49.0\\google.apis.core.1.49.0.nupkg.sha512",
+    "C:\\Users\\lomed\\.nuget\\packages\\google.cloud.bigquery.v2\\2.1.0\\google.cloud.bigquery.v2.2.1.0.nupkg.sha512",
     "C:\\Users\\lomed\\.nuget\\packages\\google.cloud.datastore.v1\\3.1.0\\google.cloud.datastore.v1.3.1.0.nupkg.sha512",
     "C:\\Users\\lomed\\.nuget\\packages\\google.protobuf\\3.13.0\\google.protobuf.3.13.0.nupkg.sha512",
     "C:\\Users\\lomed\\.nuget\\packages\\grpc.auth\\2.31.0\\grpc.auth.2.31.0.nupkg.sha512",
@@ -21,10 +24,10 @@
     "C:\\Users\\lomed\\.nuget\\packages\\system.linq.async\\4.0.0\\system.linq.async.4.0.0.nupkg.sha512",
     "C:\\Users\\lomed\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\lomed\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
-    "C:\\Users\\lomed\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\lomed\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\lomed\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.8\\microsoft.aspnetcore.app.ref.3.1.8.nupkg.sha512",
-    "C:\\Users\\lomed\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.9\\microsoft.netcore.app.host.win-x64.3.1.9.nupkg.sha512"
+    "C:\\Users\\lomed\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.9\\microsoft.netcore.app.host.win-x64.3.1.9.nupkg.sha512",
+    "C:\\Users\\lomed\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\lomed\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }

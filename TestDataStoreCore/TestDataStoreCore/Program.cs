@@ -11,7 +11,10 @@ namespace TestDataStoreCore
             Console.WriteLine("Ajout de Personnes");
             CreatePersonnes();
             Console.WriteLine("Fini !!");
-            GetPersonne();
+            GetAllPersonne();
+            Console.WriteLine("recuperation des noms : ");
+            Get1Personne();
+            DeletePersonne();
         }
 
         static void CreatePersonnes()
@@ -54,13 +57,13 @@ namespace TestDataStoreCore
             }
         }
         
-        static void GetPersonne()
+        static void GetAllPersonne()
         {
-            //Project Id from the Project at GCP 
+            //renseignement de l'identifiant du projet sur Datastore
             string projectId = "testdatastore-297317";
-            //We are storing movies. So this is a Movie kind. 
+            //On veut recuperer des personnes, donc le genre est "Personne"
             string kind = "Personne";
-            //Create the datastore db
+            //on crée la bd datastore
             var db = DatastoreDb.Create(projectId);
             Query query = new Query(kind);
             foreach (var personne in db.RunQueryLazily(query))
@@ -68,6 +71,46 @@ namespace TestDataStoreCore
                 string line = $"La personne {personne["prenom"].StringValue} {personne["nom"].StringValue} est présente dans la base de donnée, elle a  {personne["age"].IntegerValue} ans.";
 
                 Console.WriteLine(line);
+            }
+        }
+        static void Get1Personne()
+        {
+            //renseignement de l'identifiant du projet sur Datastore
+            string projectId = "testdatastore-297317";
+            //on crée la bd datastore
+            var db = DatastoreDb.Create(projectId);
+
+            Query query = new Query("Personne")
+            {
+                Filter = Filter.Equal("nom", "Medori")
+            };
+            foreach (Entity entity in db.RunQueryLazily(query))
+            {
+                string prenom = (string)entity["prenom"];
+                //string prenom = (string)entity["prenom"];
+                Console.WriteLine($"{prenom}");
+            }
+        }
+        static void DeletePersonne()
+        {
+            //renseignement de l'identifiant du projet sur Datastore
+            string projectId = "testdatastore-297317";
+            //on crée la bd datastore
+            var db = DatastoreDb.Create(projectId);
+
+            Query query = new Query("Personne")
+            {
+                Filter = Filter.GreaterThan("age", 22),
+            };
+            foreach (Entity entity in db.RunQueryLazily(query))
+            {
+                string prenom = (string)entity["prenom"];
+                if (entity != null)
+                {
+                    Console.WriteLine($"{prenom} a été supprimé");
+                    db.Delete(entity);
+                }
+                
             }
         }
     }

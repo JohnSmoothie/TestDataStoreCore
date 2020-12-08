@@ -34,3 +34,6 @@ E:\M2\projetColin\TestDataStoreCore\TestDataStoreCore\TestDataStoreCore\obj\Debu
 E:\M2\projetColin\TestDataStoreCore\TestDataStoreCore\TestDataStoreCore\obj\Debug\netcoreapp3.1\TestDataStoreCore.dll
 E:\M2\projetColin\TestDataStoreCore\TestDataStoreCore\TestDataStoreCore\obj\Debug\netcoreapp3.1\TestDataStoreCore.pdb
 E:\M2\projetColin\TestDataStoreCore\TestDataStoreCore\TestDataStoreCore\obj\Debug\netcoreapp3.1\TestDataStoreCore.genruntimeconfig.cache
+E:\M2\projetColin\TestDataStoreCore\TestDataStoreCore\TestDataStoreCore\bin\Debug\netcoreapp3.1\Google.Api.Gax.Rest.dll
+E:\M2\projetColin\TestDataStoreCore\TestDataStoreCore\TestDataStoreCore\bin\Debug\netcoreapp3.1\Google.Apis.Bigquery.v2.dll
+E:\M2\projetColin\TestDataStoreCore\TestDataStoreCore\TestDataStoreCore\bin\Debug\netcoreapp3.1\Google.Cloud.BigQuery.V2.dll
