@@ -11,6 +11,7 @@ namespace TestDataStoreCore
             Console.WriteLine("Ajout de Personnes");
             CreatePersonnes();
             Console.WriteLine("Fini !!");
+            GetPersonne();
         }
 
         static void CreatePersonnes()
@@ -28,10 +29,10 @@ namespace TestDataStoreCore
             personneEntities.Add(
                     new Entity
                     {
-                        Key = db.CreateKeyFactory(kind).CreateKey($"key{3}"),
-                        ["nom"] = $"Coudrec",
-                        ["prenom"] = $"Clémentine",
-                        ["age"] = 21
+                        Key = db.CreateKeyFactory(kind).CreateKey($"key{4}"),
+                        ["nom"] = $"Medori",
+                        ["prenom"] = $"Loïc",
+                        ["age"] = 24
                     }
                 );
 
@@ -50,6 +51,23 @@ namespace TestDataStoreCore
             {
                 transaction.Upsert(personneEntities);
                 transaction.Commit();
+            }
+        }
+        
+        static void GetPersonne()
+        {
+            //Project Id from the Project at GCP 
+            string projectId = "testdatastore-297317";
+            //We are storing movies. So this is a Movie kind. 
+            string kind = "Personne";
+            //Create the datastore db
+            var db = DatastoreDb.Create(projectId);
+            Query query = new Query(kind);
+            foreach (var personne in db.RunQueryLazily(query))
+            {
+                string line = $"La personne {personne["prenom"].StringValue} {personne["nom"].StringValue} est présente dans la base de donnée, elle a  {personne["age"].IntegerValue} ans.";
+
+                Console.WriteLine(line);
             }
         }
     }
