@@ -6,33 +6,41 @@ namespace TestDataStoreCore
 {
     class Program
     {
+            //renseignement de l'identifiant du projet sur Datastore
+            private static string projectId = "testdatastore-297317";
+            //on crée le genre Personne
+            private static string kind = "Personne";
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Ajout de Personnes");
-            CreatePersonnes();
-            Console.WriteLine("Fini !!");
-            GetAllPersonne();
-            Console.WriteLine("recuperation des noms : ");
-            Get1Personne();
-            DeletePersonne();
+            //Console.WriteLine("Ajout de Personnes");
+            //CreatePersonnes();
+
+            //Console.WriteLine("Recuperation de toutes les personnes");
+            //GetAllPersonne();
+
+            //Console.WriteLine("Recuperation d'une personne : ");
+            //Get1Personne();
+
+            //Console.WriteLine("Suppression d'une personne");
+            //DeletePersonne();
+
+            Console.WriteLine("Update des personnes");
+            UpdatePersonne();
         }
 
         static void CreatePersonnes()
         {
-            //renseignement de l'identifiant du projet sur Datastore
-            string projectId = "testdatastore-297317";
-            //on crée le genre Personne
-            string kind = "Personne";
-            //on crée la bd datastore
-            var db = DatastoreDb.Create(projectId);
 
+            //on créé l'objet de service en mode Datastore autorisé
+            var db = DatastoreDb.Create(projectId);
 
             List<Entity> personneEntities = new List<Entity>();
 
             personneEntities.Add(
                     new Entity
                     {
-                        Key = db.CreateKeyFactory(kind).CreateKey($"key{4}"),
+                        Key = db.CreateKeyFactory(kind).CreateKey($"key{1}"),
                         ["nom"] = $"Medori",
                         ["prenom"] = $"Loïc",
                         ["age"] = 24
@@ -45,7 +53,17 @@ namespace TestDataStoreCore
                         Key = db.CreateKeyFactory(kind).CreateKey($"key{2}"),
                         ["nom"] = $"Balkany",
                         ["prenom"] = $"Patrick",
-                        ["age"] = 65
+                        ["age"] = 72
+                    }
+                );
+
+            personneEntities.Add(
+                    new Entity
+                    {
+                        Key = db.CreateKeyFactory(kind).CreateKey($"key{3}"),
+                        ["nom"] = $"Bwa",
+                        ["prenom"] = $"Viktor",
+                        ["age"] = 21
                     }
                 );
 
@@ -59,11 +77,7 @@ namespace TestDataStoreCore
         
         static void GetAllPersonne()
         {
-            //renseignement de l'identifiant du projet sur Datastore
-            string projectId = "testdatastore-297317";
-            //On veut recuperer des personnes, donc le genre est "Personne"
-            string kind = "Personne";
-            //on crée la bd datastore
+            //on créé l'objet de service en mode Datastore autorisé
             var db = DatastoreDb.Create(projectId);
             Query query = new Query(kind);
             foreach (var personne in db.RunQueryLazily(query))
@@ -75,9 +89,7 @@ namespace TestDataStoreCore
         }
         static void Get1Personne()
         {
-            //renseignement de l'identifiant du projet sur Datastore
-            string projectId = "testdatastore-297317";
-            //on crée la bd datastore
+            //on créé l'objet de service en mode Datastore autorisé
             var db = DatastoreDb.Create(projectId);
 
             Query query = new Query("Personne")
@@ -93,9 +105,7 @@ namespace TestDataStoreCore
         }
         static void DeletePersonne()
         {
-            //renseignement de l'identifiant du projet sur Datastore
-            string projectId = "testdatastore-297317";
-            //on crée la bd datastore
+            //on créé l'objet de service en mode Datastore autorisé
             var db = DatastoreDb.Create(projectId);
 
             Query query = new Query("Personne")
@@ -111,6 +121,27 @@ namespace TestDataStoreCore
                     db.Delete(entity);
                 }
                 
+            }
+        }
+        static void UpdatePersonne()
+        {
+            //on créé l'objet de service en mode Datastore autorisé
+            var db = DatastoreDb.Create(projectId);
+
+            Query query = new Query("Personne")
+            {
+                Filter = Filter.Equal("nom", "Medori"),
+            };
+            foreach (Entity entity in db.RunQueryLazily(query))
+            {
+                string prenom = (string)entity["prenom"];
+                if (entity != null)
+                {
+                    entity["age"] = 30;
+                    Console.WriteLine($"{prenom} a été modifié.");
+                    db.Update(entity);
+                }
+
             }
         }
     }
